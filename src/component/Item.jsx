@@ -15,6 +15,8 @@ export default function Item({ item, onDeleteItem, onToggleItem }) {
           value={item.packed}
           onChange={() => onToggleItem(item.id)}
         />
+        {/* onChange the toggle the item.packed */}
+        {/* The input is the checkbox and the item.packed plus onToggleItem  */}
         <span style={item.packed ? { textDecoration: "line-through" } : {}}>
           {item.quantity} {item.description}
         </span>

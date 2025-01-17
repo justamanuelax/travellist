@@ -23,12 +23,12 @@ export default function PackingList({
     sortedItems = items
       .slice()
       .sort((a, b) => a.description.localeCompare(b.description));
-
+// Sort alphabetically using a.description.localCompare(b.description)
   if (sortBy === "packed")
     sortedItems = items
       .slice()
       .sort((a, b) => Number(a.packed) - Number(b.packed));
-
+        // Compare boolean convert to number
   return (
     <div className="list">
       <ul>
@@ -41,7 +41,7 @@ export default function PackingList({
           />
         ))}
       </ul>
-
+        {/* SortyBy which chooses between 3 options input order then descriptions and then packed,  */}
       <div className="actions">
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="input">Sort by input order</option>

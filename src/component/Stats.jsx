@@ -7,16 +7,18 @@ export default function Stats({ items }) {
     }
 
     if (!items.length)
-      return (
+      return ( // The items.length is non existant return this paragraph below.
         <p className="stats">
           <em>Start adding some items to your packing list 🚀</em>
         </p>
       );
-  
+      
     const numItems = items.length;
+    // Just from the items props  the length is done. (above)
     const numPacked = items.filter((item) => item.packed).length;
+    // numpacked is the item.packed number.
     const percentage = Math.round((numPacked / numItems) * 100);
-  
+    // percentage is numPacked is / by numItems and given as a percentage.
     return (
       <footer className="stats">
         <em>

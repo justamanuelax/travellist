@@ -5,3 +5,6 @@ return(
     </div>
 )
 }
+
+// Named exports 
+// export function Logo()
